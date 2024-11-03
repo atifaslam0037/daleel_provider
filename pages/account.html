@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daleel</title>
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/apexcharts.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../assets/css/vender-ar.css">
+        <link rel="stylesheet" href="../assets/css/style-ar.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/9.0.6/css/intlTelInput.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/js/intlTelInput.js"></script>
+</head>
+
+<body>
+    <div class="dashbord-wrapper">
+        <!-- HEAD ##################-->
+        <div class="left-side">
+            <div class="d-flex flex-column align-items-start gap-3 w-100">
+                <a href="dashboard.html" class="logo">
+                    <span style="margin-left: 15px;color: white; font-weight: 800;">
+                        <img style="height: 44px; width: 38px;" src="../assets/imags/dashboard-side-logo.png">
+
+                        DALEEL</span>
+                </a>
+                <di class="d-flex flex-column align-items-start gap-2 w-100">
+                    <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+                        <li class="dashboard">
+                            <a href="dashboard.html">
+                                <img src="../assets/imags/dashboardicon.png" alt="Dashboard">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="plans">
+                            <a href="plans.html">
+                                <img src="../assets/imags/icons/placesIcon.svg" alt="plans">
+                                <span>Plans</span>
+                            </a>
+                        </li>
+                        <li class="places">
+                            <a href="places.html">
+                                <img src="../assets/imags/icons/reviewsIcon.svg" alt="places" style="opacity: 0.26">
+                                <span>Places</span>
+                            </a>
+                        </li>
+                        <li class="reviews">
+                            <a href="reviews.html">
+                                <img src="../assets/imags/reviewIcon.png" alt="Reviews">
+                                <span>Reviews</span>
+                            </a>
+                        </li>
+
+                        <li class="account">
+                            <a href="account.html">
+                                <img src="../assets/imags/icons/AccountIcon.svg" alt="Account">
+                                <span>Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </di>
+            </div>
+            <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+                <li>
+                    <a href="#">
+                        <img src="../assets/imags/logoutIcon.png" alt="Dashboard">
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- SIDEBAR #######################-->
+        <div class="main-content">
+            <header id="dashboard-header">
+                <a href="#" class="logo  col-sm-6">
+                    <div class="dashbord-toggler">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 448 512">
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </div>
+                    <h1 class="min-heading text-dark">
+                        Account Management
+                    </h1>
+                </a>
+                <div class="d-flex align-items-center justify-content-end gap-xl-4 gap-md-3 gap-2 col-sm-6">
+                    <div class="dropdown">
+                        <button class="btn-style dropdown-toggle hidden-arrow" type="button" id="notification"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/imags/icons/notifications.svg" alt="Dashboard-NOtification" width="24"
+                                height="24" style="width: auto;position: relative;">
+                            <span id="newMsgCount" class="badge rounded-pill badge-notification bg-secondary"
+                                style="    position: absolute;right: 0;top: -5px;">1</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="notification">
+                            <li class="dropdown-item">
+                                New review added
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="language-swither">
+                        <div class="d-flex align-items-center gap-1">
+                            <div class="icon">
+                                <img src="../assets/imags/icons/languageIcon.svg" alt="Language-Icon" width="19"
+                                    height="19">
+                            </div>
+                            <!-- <select name="language" id="language" class="input select p-0" style="width: fit-content;">
+                        <option value="en" selected>EN</option>
+                    </select> -->
+                        </div>
+                        <!-- <img src="../assets/imags/icons/arrow-down.svg" alt="arrow-down" loading="lazy" width="20" height="20"> -->
+                    </div>
+
+                </div>
+            </header>
+            <!-- HEADER ###################################-->
+
+            <section class="w-100">
+                <div class="px-2rem">
+                    <div class="container-fluied">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <!--  <p>Pending</p> -->
+                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                <section class="w-100">
+                                    <div class="px-2rem">
+                                        <div class="container-fluied">
+                                            <style>
+                                                #preview {
+                                                    width: 100%;
+                                                }
+
+                                                .file-preview {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    min-height: 31px;
+                                                    padding: 10px;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+                                                    align-self: stretch;
+                                                    border-radius: 4px;
+                                                    background: #F1F1F1;
+                                                    white-space: nowrap;
+                                                    flex-wrap: wrap;
+                                                    row-gap: 0.5rem;
+                                                }
+
+                                                .file-preview span {
+                                                    flex-grow: 1;
+                                                }
+
+                                                .remove-button {
+                                                    color: var(--black);
+                                                    background-color: var(--white);
+                                                    display: flex;
+                                                    padding: 0px 3px;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    gap: 10px;
+                                                    border-radius: 6px;
+                                                    font-family: 'Montserrat', sans-serif;
+                                                    font-size: 16px;
+                                                    font-style: normal;
+                                                    font-weight: 700;
+                                                    line-height: normal;
+                                                    letter-spacing: 0.16px;
+                                                    text-wrap: nowrap;
+                                                    transition: all 0.4s ease-in-out;
+                                                    outline: 0;
+                                                    border: none;
+                                                    padding: 6px;
+                                                    border-radius: 15px;
+                                                    font-size: 14px;
+                                                }
+
+                                                .remove-button:hover {
+                                                    background-color: var(--black);
+                                                    color: var(--white);
+                                                }
+                                            </style>
+                                            <div class="tab-pane w-100 active" id="edit-profile" role="tabpanel"
+                                                aria-labelledby="edit-profile">
+                                                <div class="d-flex justify-content-between flex-column flex-wrap gap-3">
+
+                                                    <form action="update_profile.html" method="POST"
+                                                        enctype="multipart/form-data" id="updateProfileForm">
+                                                        <div class="d-flex justify-content-between flex-column gap-3">
+                                                            <div class="profile-img-con mx-auto">
+                                                                <img src="../admin/app/media/img/users/user-1.png"
+                                                                    alt="" loading="lazy">
+                                                                <div class="uploadicon">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="25" height="25" viewBox="0 0 25 25"
+                                                                            fill="none">
+                                                                            <path
+                                                                                d="M5.31856 21.1411C5.18034 21.1408 5.04369 21.1118 4.91728 21.0559C4.79088 21 4.67749 20.9184 4.58433 20.8163C4.48949 20.715 4.41711 20.5949 4.37196 20.4637C4.32681 20.3326 4.30989 20.1933 4.32232 20.0552L4.5664 17.3713L15.8419 6.09979L19.3656 9.6225L8.0931 20.893L5.40922 21.1371C5.37908 21.1399 5.34883 21.1412 5.31856 21.1411ZM20.0689 8.91816L16.5462 5.39545L18.6592 3.28242C18.7518 3.18979 18.8616 3.11631 18.9826 3.06617C19.1035 3.01604 19.2332 2.99023 19.3641 2.99023C19.495 2.99023 19.6246 3.01604 19.7456 3.06617C19.8665 3.11631 19.9764 3.18979 20.0689 3.28242L22.182 5.39545C22.2746 5.48797 22.3481 5.59785 22.3982 5.71879C22.4483 5.83973 22.4741 5.96937 22.4741 6.10029C22.4741 6.23121 22.4483 6.36085 22.3982 6.48179C22.3481 6.60273 22.2746 6.71261 22.182 6.80513L20.0699 8.91716L20.0689 8.91816Z"
+                                                                                fill="#F2F2F2" />
+                                                                        </svg>
+                                                                    </span>
+                                                                    <input id="image" name="image" type="file">
+                                                                </div>
+                                                            </div>
+                                                            <span class="error text-danger text-center"
+                                                                id="imageError"></span>
+                                                            <div class="input-con w-100">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <label for="fullname" class="label">
+                                                                            Name
+                                                                            <input type="text" name="full_name"
+                                                                                id="full_name" placeholder="Enter here"
+                                                                                class="input" value="">
+                                                                        </label>
+                                                                        <span class="error text-danger"
+                                                                            id="full_nameError"></span>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="number" class="label">
+                                                                            Phone number
+                                                                            <input type="text" maxlength="20"
+                                                                                onkeypress="return /[0-9]/.test(event.key)"
+                                                                                name="phone" id="phone"
+                                                                                placeholder="Enter here" class="input"
+                                                                                value="">
+                                                                        </label>
+                                                                        <span class="error text-danger"
+                                                                            id="phoneError"></span>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="Age" class="label">
+                                                                            Age
+                                                                            <input type="text" name="age" maxlength="2"
+                                                                                onkeypress="return /[0-9]/.test(event.key)"
+                                                                                id="age" placeholder="Enter here"
+                                                                                class="input" value="">
+                                                                        </label>
+                                                                        <span class="error text-danger"
+                                                                            id="ageError"></span>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="location" class="label">
+                                                                            Location
+                                                                            <input type="text" id="js-search-input"
+                                                                                class="input pass-icon pe-5 location_new"
+                                                                                name="location"
+                                                                                value="Riyadh West side" />
+                                                                            <div id="google-map" style="display: none;">
+                                                                            </div>
+                                                                            <input type="hidden" name="lat" id="lat"
+                                                                                class="input">
+                                                                            <input type="hidden" name="lng" id="lng"
+                                                                                class="input">
+                                                                            <span class="input-icon pointer"> <img
+                                                                                    src="../assets/imags/icons/arrow-down.svg"
+                                                                                    alt="" loading="lazy"></span>
+                                                                        </label>
+                                                                        <span class="error text-danger"
+                                                                            id="locationError"></span>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <a href="changeweb_password.html" class="fs-16 mx-auto">
+                                                                            Change password
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="col-md-6 text-end">
+                                                                        <button type="button" class="btn btn-green px-4 py-2"
+                                                                    id="updateProfileBtn">
+                                                                    Save
+                                                                </button>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                function previewFile() {
+                                                    const preview = document.getElementById('preview');
+                                                    const fileInput = document.getElementById('document');
+                                                    const files = fileInput.files;
+
+                                                    // Clear previous preview
+                                                    //preview.innerHTML = '';
+
+                                                    // Loop through the selected files
+                                                    for (let i = 0; i < files.length; i++) {
+                                                        const file = files[i];
+
+                                                        // Create container for file preview
+                                                        const container = document.createElement('div');
+                                                        container.classList.add('file-preview');
+
+                                                        // Create element to display file name
+                                                        const fileName = document.createElement('span');
+                                                        fileName.textContent = file.name;
+
+                                                        // Create remove button
+                                                        const removeButton = document.createElement('button');
+                                                        removeButton.textContent = 'Remove';
+                                                        removeButton.classList.add('remove-button');
+                                                        removeButton.addEventListener('click', function () {
+                                                            // Remove file preview container when remove button is clicked
+                                                            container.remove();
+                                                        });
+
+                                                        // Append file name and remove button to container
+                                                        container.appendChild(fileName);
+                                                        container.appendChild(removeButton);
+
+                                                        // Append container to preview
+                                                        preview.appendChild(container);
+                                                    }
+                                                }
+                                            </script>
+                                            <script>
+                                                // Phone number input countery
+                                                $("#phone").intlTelInput({
+                                                    initialCountry: "ae",
+                                                    separateDialCode: false,
+                                                });
+                                                // Phone number input countery
+                                            </script>
+                                            <script
+                                                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/apexcharts.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>
+<!-- FOOTER ##############################-->

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daleel</title>
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/apexcharts.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <!-- <link rel="stylesheet" href="../assets/css/vender-ar.css">
+        <link rel="stylesheet" href="../assets/css/style-ar.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/9.0.6/css/intlTelInput.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/js/intlTelInput.js"></script>
+</head>
+
+<body>
+    <div class="dashbord-wrapper">
+<!-- HEAD ##################-->
+<div class="left-side">
+    <div class="d-flex flex-column align-items-start gap-3 w-100">
+        <a href="dashboard.html" class="logo">
+            <span style="margin-left: 15px;color: white; font-weight: 800;">            
+            <img style="height: 44px; width: 38px;" src="../assets/imags/dashboard-side-logo.png">
+
+DALEEL</span>
+        </a>
+        <di class="d-flex flex-column align-items-start gap-2 w-100">
+            <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+                <li class="dashboard">
+                    <a href="dashboard.html">
+                        <img src="../assets/imags/dashboardicon.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="plans">
+                    <a href="plans.html">
+                        <img src="../assets/imags/icons/placesIcon.svg" alt="plans">
+                        <span>Plans</span>
+                    </a>
+                </li>
+                <li class="places">
+                    <a href="places.html">
+                        <img src="../assets/imags/icons/reviewsIcon.svg" alt="places" style="opacity: 0.26">
+                        <span>Places</span>
+                    </a>
+                </li>
+                <li class="reviews">
+                    <a href="reviews.html">
+                        <img src="../assets/imags/reviewIcon.png" alt="Reviews">
+                        <span>Reviews</span>
+                    </a>
+                </li>
+                
+                <li class="account">
+                    <a href="account.html">
+                        <img src="../assets/imags/icons/AccountIcon.svg" alt="Account">
+                        <span>Account</span>
+                    </a>
+                </li>
+            </ul>
+        </di>
+    </div>
+    <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+        <li>
+            <a href="#">
+                <img src="../assets/imags/logoutIcon.png" alt="Dashboard">
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- SIDEBAR #######################-->
+<div class="main-content">
+    <header id="dashboard-header">
+        <a href="#" class="logo  col-sm-6">
+            <div class="dashbord-toggler">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 448 512">
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </div>
+            <h1 class="min-heading text-dark">
+              Dashboard
+             </h1>
+        </a>
+        <div class="d-flex align-items-center justify-content-end gap-xl-4 gap-md-3 gap-2 col-sm-6">
+            <div class="dropdown">
+                <button class="btn-style dropdown-toggle hidden-arrow" type="button" id="notification"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../assets/imags/icons/notifications.svg" alt="Dashboard-NOtification" width="24"
+                        height="24" style="width: auto;position: relative;">
+                    <span id="newMsgCount" class="badge rounded-pill badge-notification bg-secondary"
+                        style="    position: absolute;right: 0;top: -5px;">1</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="notification">
+                    <li class="dropdown-item" >
+New review added
+                    </li>
+                </ul>
+            </div>
+            <div class="language-swither">
+                <div class="d-flex align-items-center gap-1">
+                    <div class="icon">
+                        <img src="../assets/imags/icons/languageIcon.svg" alt="Language-Icon" width="19" height="19">
+                    </div>
+                    <!-- <select name="language" id="language" class="input select p-0" style="width: fit-content;">
+                        <option value="en" selected>EN</option>
+                    </select> -->
+                </div>
+                <!-- <img src="../assets/imags/icons/arrow-down.svg" alt="arrow-down" loading="lazy" width="20" height="20"> -->
+            </div>
+
+        </div>
+    </header>
+    <!-- HEADER ###################################-->
+
+    <section class="w-100">
+        <div class="px-2rem">
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <img src="../assets/imags/icons/reviewsIcon.svg" >
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="min-heading text-dark whi">
+                            10
+                        </h5>
+                        <p class="des">Places</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <img src="../assets/imags/icons/plansIcon.svg" >
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="min-heading text-dark whi">
+                            13
+                        </h5>
+                        <p class="des">Plans</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <div class="stats-icon">
+                        <img src="../assets/imags/reviewIcon.png" >
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="min-heading text-dark whi">2,409</h5>
+                        <p class="des">Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-100">
+        <div class="px-2rem">
+            <div class="container-fluied">
+                <div class="row" dir="ltr">
+                    <div class="col-lg-12">
+                        <div class="chart-box">
+                            <h4 class="mb-2">
+                               Reviews 
+                            </h4>
+                            <div id="weekly-attendance"></div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center justify-content-between mb-3 gy-3 flex-wrap">
+
+                    </div>
+                    <div class="table-box">
+                        <div class="table-responsive w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        <script>
+            // charts
+            document.addEventListener("DOMContentLoaded", function () {
+                var summary = {
+                    series: [
+                        {
+                            data: [31, 40, 28, 51, 42, 109, 100, 81, 97, 73,],
+                            stroke: {
+                                curve: "smooth",
+                                colors: ["#F0B040"],
+                            },
+                        },
+                    ],
+                    chart: {
+                        height: 280,
+                        type: "area",
+                        colors: ["#F0B040"],
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    colors: ["#F0B040"],
+                    fill: {
+                        type: 'gradient',
+                        colors: ["#F0B040"],
+                        opacity: 0.3,
+                    },
+                    xaxis: {
+                        categories: ["01 Aug", "02 Aug", "03 Aug", "04 Aug", "05 Aug", "06 Aug", "07 Aug", "08 Aug", "09 Aug", "10 Aug",],
+                    },
+                    yaxis: {
+                        opposite: false,
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    markers: {
+                        size: 5,
+                        colors: ["#fff"],
+                        strokeColor: "#F0B040",
+                        strokeWidth: 2.5
+                    },
+    
+                };
+    
+                const chart = new ApexCharts(
+                    document.querySelector("#booking-summary"),
+                    summary
+                );
+                chart.render();
+                var g_data = [
+        "01 Oct", "02 Oct", "03 Oct", "04 Oct", "05 Oct", 
+        "06 Oct", "07 Oct", "08 Oct", "09 Oct", "10 Oct",
+        "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct",
+        "16 Oct", "17 Oct", "18 Oct", "19 Oct"
+    ];
+    var s_data = [
+        120, 180, 130, 200, 150, 
+        210, 300, 250, 180, 170,
+        220, 190, 160, 280, 130,
+        170, 240, 300, 260
+    ];
+                var grapghData = [];
+                var attendance = {
+                    series: [
+                        {   name:'reviews',
+                            data: s_data,
+                        },
+                    ],
+                    chart: {
+                        type: "bar",
+                        height: 280,
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    plotOptions: {
+                        bar: {
+                            borderRadius: 4,
+                        },
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    xaxis: {
+                        categories: g_data,
+                    },
+                    fill: {
+                        colors: ["#F0B040"],
+                    },
+    
+                };
+    
+                var chart2 = new ApexCharts(
+                    document.querySelector("#weekly-attendance"),
+                    attendance
+                );
+                chart2.render();
+            })
+            // charts
+        </script>
+    </section>
+</div>
+</div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
+<script src="../assets/js/apexcharts.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>
+<!-- FOOTER ##############################-->

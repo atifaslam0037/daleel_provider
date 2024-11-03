@@ -1,0 +1,180 @@
+
+.price{
+    font-style: normal;
+}
+body{
+    font-size:12px;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item>.m-menu__link .m-menu__link-text {
+    color: #ebedf2;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item>.m-menu__heading .m-menu__link-icon, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item>.m-menu__link .m-menu__link-icon {
+    color: #ebedf2;
+}
+
+#swal2-content
+{
+    color:maroon;
+    font-weight:bold;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__heading .m-menu__link-icon, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link .m-menu__link-icon {
+    color: #ffeb00;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link .m-menu__link-text {
+    color: #ffeb00;
+}
+
+
+    @media (min-width: 1025px){
+        .m-aside-left--minimize .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--active>.m-menu__link>.m-menu__link-icon, .m-aside-left--minimize .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--expanded>.m-menu__link>.m-menu__link-icon {
+            color: #ffeb00;
+        }
+    }
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item .m-menu__submenu .m-menu__item.m-menu__item--active>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item .m-menu__submenu .m-menu__item.m-menu__item--active>.m-menu__link .m-menu__link-text {
+    color: #ffeb00;
+}
+
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__heading .m-menu__link-text, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__link .m-menu__link-text {
+    color: #ffffff;
+}
+.m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__heading .m-menu__link-icon, .m-aside-menu.m-aside-menu--skin-dark .m-menu__nav>.m-menu__item.m-menu__item--open>.m-menu__link .m-menu__link-icon {
+    color: #ffffff;
+}
+
+.m-list-search .m-list-search__results .m-list-search__result-item:hover .m-list-search__result-item-text {
+    color: #f4516c;
+}
+
+.m-list-search .m-list-search__results .m-list-search__result-item .m-list-search__result-item-text {
+    color: #f4516c;
+}
+.m-list-search .m-list-search__results .m-list-search__result-item .m-list-search__result-item-pic img {
+    max-width: 16px!important;
+}
+/* new internal css */
+.btn-web-link{
+    margin-left: 95px;
+}
+.profile-links li a:hover {
+    color: #716aca;
+}
+.btn-load-data, .btn-reset-data{
+    background-color: #716aca;
+    border-color: #716aca;
+    height: 35px;
+    border-radius: 20px;
+    margin-top: 12%;
+
+}
+.btn-load-data:hover{
+    background-color: #5867DD;
+    border-color: #5867DD;
+}
+.d-select
+{
+    padding-right: 30px;
+}
+input[type=date]
+{
+    height: 35px;
+}
+.d-select:focus, input[type=date]:focus
+{
+    box-shadow: none;
+    border-color: #716aca;
+}
+.summary-box{
+    background-color: #F1F4FB;
+    border-radius: 5px;
+    height: 100px;
+    padding: 17px 10px;
+    line-height: 30px;
+    text-align: center;
+
+}
+.summary-box > span{
+    margin: 0px auto;
+}
+.summary-box > .summary-heading{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.summary-box > .selling{
+    font-size: 13px;
+}        
+.nopadding-summary-data > .col, .col-6 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.advices-summary-percentage > .summary-heading, .advices-summary-amount > .summary-heading{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.summary-divider{
+    max-width: 1px;
+    max-height: 80px;
+    border: 1px solid gainsboro;
+}
+.advices th{
+    font-size: 13px;
+}
+.advices-heading{
+    font-weight: bold;
+}
+/* chart */
+.circle {
+    position: relative;
+    top: 2px;
+    left: 2.45px;
+    text-align: center;
+    font-size: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    transition: .3s;
+}
+
+.circle-border {
+    position: relative;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    border-radius: 100%;
+    background-color: blue;
+    background: linear-gradient(0deg, lightgray 100%, black 0%)
+}
+.chart-box{
+    margin-top: -10px;
+}
+/* chart end */
+#buying_summary_table > tr > td{
+    border-spacing: 20px;
+    padding: 2px;
+}
+#tradein_summary_table > tr > td{
+    border-spacing: 20px;
+    padding: 2px;
+}
+#selling_summary_table > tr > td{
+    border-spacing: 20px;
+    padding: 2px;
+}
+.red_price{
+    color: red;
+}
+.green_price{
+    color: green;
+}
+
+.filterToSearch_text{
+    color: red;
+}

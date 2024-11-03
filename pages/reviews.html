@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daleel</title>
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/apexcharts.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <!-- <link rel="stylesheet" href="../assets/css/vender-ar.css">
+        <link rel="stylesheet" href="../assets/css/style-ar.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/9.0.6/css/intlTelInput.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/js/intlTelInput.js"></script>
+</head>
+
+<body>
+    <div class="dashbord-wrapper">
+<!-- HEAD ##################-->
+<div class="left-side">
+    <div class="d-flex flex-column align-items-start gap-3 w-100">
+        <a href="dashboard.html" class="logo">
+            <span style="margin-left: 15px;color: white; font-weight: 800;">            
+            <img style="height: 44px; width: 38px;" src="../assets/imags/dashboard-side-logo.png">
+
+DALEEL</span>
+        </a>
+        <di class="d-flex flex-column align-items-start gap-2 w-100">
+            <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+                <li class="dashboard">
+                    <a href="dashboard.html">
+                        <img src="../assets/imags/dashboardicon.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="plans">
+                    <a href="plans.html">
+                        <img src="../assets/imags/icons/placesIcon.svg" alt="plans">
+                        <span>Plans</span>
+                    </a>
+                </li>
+                <li class="places">
+                    <a href="places.html">
+                        <img src="../assets/imags/icons/reviewsIcon.svg" alt="places" style="opacity: 0.26">
+                        <span>Places</span>
+                    </a>
+                </li>
+                <li class="reviews">
+                    <a href="reviews.html">
+                        <img src="../assets/imags/reviewIcon.png" alt="Reviews">
+                        <span>Reviews</span>
+                    </a>
+                </li>
+                
+                <li class="account">
+                    <a href="account.html">
+                        <img src="../assets/imags/icons/AccountIcon.svg" alt="Account">
+                        <span>Account</span>
+                    </a>
+                </li>
+            </ul>
+        </di>
+    </div>
+    <ul class="dashbord-links p-0 m-0 w-100 d-flex flex-column gap-2">
+        <li>
+            <a href="#">
+                <img src="../assets/imags/logoutIcon.png" alt="Dashboard">
+                <span>Logout</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- SIDEBAR #######################-->
+<div class="main-content">
+    <header id="dashboard-header">
+        <a href="#" class="logo  col-sm-6">
+            <div class="dashbord-toggler">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 448 512">
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </div>
+            <h1 class="min-heading text-dark">
+              Manage reviews 
+             </h1>
+        </a>
+        <div class="d-flex align-items-center justify-content-end gap-xl-4 gap-md-3 gap-2 col-sm-6">
+            <div class="dropdown">
+                <button class="btn-style dropdown-toggle hidden-arrow" type="button" id="notification"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../assets/imags/icons/notifications.svg" alt="Dashboard-NOtification" width="24"
+                        height="24" style="width: auto;position: relative;">
+                    <span id="newMsgCount" class="badge rounded-pill badge-notification bg-secondary"
+                        style="    position: absolute;right: 0;top: -5px;">1</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="notification">
+                    <li class="dropdown-item" >
+New review added
+                    </li>
+                </ul>
+            </div>
+            <div class="language-swither">
+                <div class="d-flex align-items-center gap-1">
+                    <div class="icon">
+                        <img src="../assets/imags/icons/languageIcon.svg" alt="Language-Icon" width="19" height="19">
+                    </div>
+                    <!-- <select name="language" id="language" class="input select p-0" style="width: fit-content;">
+                        <option value="en" selected>EN</option>
+                    </select> -->
+                </div>
+                <!-- <img src="../assets/imags/icons/arrow-down.svg" alt="arrow-down" loading="lazy" width="20" height="20"> -->
+            </div>
+
+        </div>
+    </header>
+    <!-- HEADER ###################################-->
+
+    <section class="w-100">
+        <div class="px-2rem">
+            <div class="container-fluied">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                   <!--  <p>Pending</p> -->
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                        <style>
+                            .star {
+                              color: gold; /* Change the color to your preference */
+                              font-size: 20px; /* Adjust the size as needed */
+                            }
+                          </style>
+                          <section class="w-100">
+                              <div class="px-2rem">
+                                  <div class="container-fluied">
+                                      <div class="table-box w-100">
+                                      <div class="table-responsive w-100">
+                                          <table class="table-dashboard" id="review_table">
+                                              <thead>
+                                                  <tr>
+                                                      <th>Type</th> <!-- Plan or Place-->
+                                                      <th>Place/Plan title</th>
+                                                      <th>Date created</th>
+                                                      <th>Rating</th>
+                                                      <th>Review</th>
+                                                      <th>Action</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                    <td>Plan</td>  
+                                                    <td>Visit to Riyadh</td>
+                                                    <td>Jan 20, 24 04:40PM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>It's worth it!</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Place</td>  
+                                                    <td>Edge of the World</td>
+                                                    <td>Feb 10, 24 11:25AM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span></td>
+                                                    <td>Amazing experience, breathtaking views!</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan</td>  
+                                                    <td>Explore Jeddah</td>
+                                                    <td>Feb 14, 24 08:00AM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>Beautiful city with rich history!</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Place</td>  
+                                                    <td>Al-Ula Heritage Site</td>
+                                                    <td>Feb 22, 24 06:30PM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span></td>
+                                                    <td>Unforgettable cultural experience.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan</td>  
+                                                    <td>Desert Safari, Riyadh</td>
+                                                    <td>Mar 01, 24 02:15PM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>Fun but could be more organized.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Place</td>  
+                                                    <td>Jeddah Waterfront</td>
+                                                    <td>Mar 08, 24 10:45AM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>Perfect for family outings!</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan</td>  
+                                                    <td>Mecca & Medina Tour</td>
+                                                    <td>Mar 15, 24 05:55PM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>Very spiritual and well-organized.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Place</td>  
+                                                    <td>Taif Rose Gardens</td>
+                                                    <td>Mar 20, 24 07:00AM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></td>
+                                                    <td>Lovely gardens and peaceful ambiance.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Plan</td>  
+                                                    <td>Saudi Islands Tour</td>
+                                                    <td>Mar 25, 24 03:00PM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span></td>
+                                                    <td>Beautiful islands, but limited facilities.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Place</td>  
+                                                    <td>Diriyah Historical Village</td>
+                                                    <td>Mar 30, 24 09:15AM</td>
+                                                    <td><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span><span class="star">&#9734;</span></td>
+                                                    <td>Fascinating glimpse into Saudi history.</td>
+                                                    <td>
+                                                        <button type="button" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill delete-category-button" title="Delete">
+                                                            <i class="la la-trash"><img src="../assets/imags/icons/action-delete.svg" alt="Eye icon" loading="lazy"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                          </table>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </section>
+                          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                          <script>
+                              // Use querySelectorAll to get all buttons with the class
+                              document.querySelectorAll('.delete-category-button').forEach(function(button) {
+                                  button.addEventListener('click', function () {
+                                      Swal.fire({
+                                          title: 'Are you sure?',
+                                          text: "You won't be able to revert this!",
+                                          icon: 'warning',
+                                          showCancelButton: true,
+                                          confirmButtonColor: '#3085d6',
+                                          cancelButtonColor: '#d33',
+                                          confirmButtonText: 'Yes, delete it!'
+                                      }).then((result) => {
+                                          if (result.isConfirmed) {
+                                              // Use closest on the clicked button
+                                              this.closest('form').submit();
+                                          }
+                                      });
+                                  });
+                              });
+                          </script>
+                          <script>new DataTable('#review_table', {
+                               "info": false,
+                               "lengthChange": false, 
+                               "columnDefs": [
+                                  { "orderable": false, "targets": 5 } 
+                              ]
+                          });</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+</div>
+</div>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
+<script src="../assets/js/apexcharts.min.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>
+<!-- FOOTER ##############################-->
